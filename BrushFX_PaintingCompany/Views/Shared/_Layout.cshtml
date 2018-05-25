@@ -8,31 +8,43 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body class="grey">
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse " >
         <div class="container-fluid">
+
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Brush FX</a>
+
+                <button type="button" id="icon-button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar"></button>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </div>
-            <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="#">About Us</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Commercial
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Interior</a></li>
-                        <li><a href="#">Exterior</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Residential</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#login-modal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="#">About Us</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Commercial
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Interior</a></li>
+                            <li><a href="#">Exterior</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Residential</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#login-modal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+
+
         </div>
     </nav>
 
@@ -85,10 +97,43 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <!-- Footer -->
+            <section id="footer">
+                <div class="container">
+                    <div class="row text-center text-xs-center text-sm-left text-md-left">
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <h5>Quick links</h5>
+                            <ul class="list-unstyled quick-links">
+                                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+                                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Gallery</a></li>
+                                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
+                                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                            <ul class="list-unstyled list-inline social text-center">
+                                <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                        </br>
+                    </div>
+
+                </div>
+            </section>
+            <!-- ./Footer -->
         </footer>
     </div>
-
+        
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
