@@ -88,3 +88,4 @@ C:\Users\spencer.pounds\source\repos\BrushFX_PaintingCompany\BrushFX_PaintingCom
 C:\Users\spencer.pounds\source\repos\BrushFX_PaintingCompany\BrushFX_PaintingCompany\bin\roslyn\vbc.rsp
 C:\Users\spencer.pounds\source\repos\BrushFX_PaintingCompany\BrushFX_PaintingCompany\bin\roslyn\VBCSCompiler.exe
 C:\Users\spencer.pounds\source\repos\BrushFX_PaintingCompany\BrushFX_PaintingCompany\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\spencer.pounds\source\repos\BrushFX_PaintingCompany\BrushFX_PaintingCompany\obj\Debug\BrushFX_PaintingCompany.csprojResolveAssemblyReference.cache

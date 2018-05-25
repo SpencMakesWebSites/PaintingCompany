@@ -156,6 +156,21 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Pictures\1920X1080\creation.jpg" />
+    <Content Include="Content\Pictures\1920X1080\Forest.jpg" />
+    <Content Include="Content\Pictures\1920X1080\Ship.jpg" />
+    <Content Include="Content\Pictures\1920X1080\Skyline.jpg" />
+    <Content Include="Content\Pictures\200X200\FacePic1.jpg" />
+    <Content Include="Content\Pictures\203X203\CabinetPainting.png" />
+    <Content Include="Content\Pictures\203X203\Decks.png" />
+    <Content Include="Content\Pictures\203X203\ExteriorPainting.png" />
+    <Content Include="Content\Pictures\203X203\InteriorPainting.png" />
+    <Content Include="Content\Pictures\375X200\Cabinent_375x200.jpg" />
+    <Content Include="Content\Pictures\600X200\Cabinent_600x200.jpg" />
+    <Content Include="Content\Pictures\640X480\Cabinents.jpg" />
+    <Content Include="Content\Pictures\640X480\Exterior_640X480.jpg" />
+    <Content Include="Content\Pictures\640X480\imgonline-com-ua-resize-TwfMY3DFlW.jpg" />
+    <Content Include="Content\Pictures\BrushFX.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

@@ -7,27 +7,81 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+<body class="grey">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="#">Brush FX</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a href="#">About Us</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Commercial
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Interior</a></li>
+                        <li><a href="#">Exterior</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Residential</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#login-modal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Login Modal-->
+    <div class="modal fade" id="login-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                        <div class="jumbotron">
+                            <div >
+                                <h3 class="text-primary text-center"> Sign In</h3>
+
+                            </div>
+
+                            <div class="row text-center col-lg-offset-2">
+
+                                <div class="col col-lg-8">
+                                    <div class="form-group">
+                                        <input type="text" id="loginUserName" name="loginUserName" placeholder="username" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col col-lg-8">
+                                    <div class="form-group">
+                                        <input type="password" name="pass" placeholder="Password" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col col-lg-8">
+                                    <div class="form-group">
+                                        <button class="btn btn-block btn-primary">Sign In</button>
+                                    </div>
+                                </div>
+                                <div class="text-primary">
+                                    <p class="text-muted"><a href="#">Forgot password?</a></p>
+                                </div>
+                                <div class="text-primary">
+                                    <p class="text-muted"><a href="#">Forgot username?</a></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+
+    <div class="container-fluid body-content">
         @RenderBody()
         <hr />
         <footer>

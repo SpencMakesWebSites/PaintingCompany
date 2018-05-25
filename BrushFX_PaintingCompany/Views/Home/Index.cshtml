@@ -1,31 +1,208 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
 
+<!--Carousel-->
+<div class="container-fluid">
+
+    <div class="carousel-fluid slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="~/Content/Pictures/1920X1080/Forest.jpg" alt="BrushFX Forrest" />
+                <div class="carousel-caption"><h1>BIG WORDS</h1></div>
+            </div>
+
+            <div class="item">
+                <img src="~/Content/Pictures/1920X1080/creation.jpg" alt="BrushFX Creation" />
+            </div>
+
+            <div class="item">
+                <img src="~/Content/Pictures/1920X1080/Ship.jpg" alt="BrushFX Ship" />
+            </div>
+
+            <div class="item">
+                <img src="~/Content/Pictures/1920X1080/Skyline.jpg" alt="BrushFX Skyline" />
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Panel-->
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+
+
+    <div class="panel panel-default" id="hoverTrigger1">
+        <div class="row text-center">
+            <div class="col col-lg-3 col-sm-6 pull-left col-xs-12 text-center">
+                <div class="panel-body col-lg-offset-1 borderless">
+                    <div class="thumbnail borderless">
+                        <a href="~/Content/Pictures/203X203/InteriorPainting.png" alt="cabinets" class="borderless">
+                            <img src="~/Content/Pictures/203X203/InteriorPainting.png" id="panel1" />
+                        </a>
+                        <div class="caption text-center"><h3 class="text-primary">Interior</h3></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-3 col-sm-6 pull-left col-xs-12 text-center">
+                <div class="panel-body col-lg-offset-1 borderless">
+                    <div class="thumbnail borderless">
+                        <a href="~/Content/Pictures/203X203/ExteriorPainting.png" alt="cabinets" class="borderless">
+                            <img src="~/Content/Pictures/203X203/ExteriorPainting.png" id="panel2" />
+                        </a>
+                        <div class="caption text-center"><h3 class="text-primary">Exterior</h3></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-3 col-sm-6 pull-left col-xs-12 text-center">
+                <div class="panel-body col-lg-offset-1 borderless">
+                    <div class="thumbnail borderless">
+                        <a href="~/Content/Pictures/203X203/CabinetPainting.png" alt="cabinets" class="borderless">
+                            <img src="~/Content/Pictures/203X203/CabinetPainting.png" id="panel3" />
+                        </a>
+                        <div class="caption text-center"><h3 class="text-primary">Cabinets</h3></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-3 col-sm-6 pull-left col-xs-12 text-center">
+                <div class="panel-body col-lg-offset-1 borderless">
+                    <div class="thumbnail borderless">
+                        <a href="~/Content/Pictures/203X203/Decks.png" alt="decks" class="borderless">
+                            <img src="~/Content/Pictures/203X203/Decks.png" id="panel4" />
+                        </a>
+                        <div class="caption text-center"><h3 class="text-primary">Decks</h3></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+<div class="container-fluid">
+    <div class="row">
+        <h1 style="color:#708090;font-family:serif" class="text-center">Find your balance</h1>
+        <div class="col col-lg-6 col-sm-6" id="floatInElement">
+            <img src="~/Content/Pictures/640X480/Cabinents.jpg" id="hover-image" class="img-rounded" />
+            <div class="middle">
+                <button id="hidden1" class="btn btn-primary">COATING</button>
+            </div>
+        </div>
+
+        <div class="col col-lg-6 col-sm-6" id="floatInElement">
+            <img src="~/Content/Pictures/640X480/Exterior_640X480.jpg" id="hover-image" class="img-rounded" />
+            <div class="middle">
+                <button id="hidden1" class="btn btn-primary">REFINISHING</button>
+            </div>
+        </div>
+
     </div>
 </div>
+
+<!--Testimonial-->
+<section id="carousel">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+                <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#fade-quote-carousel" data-slide-to="0"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="2" class="active"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="5"></li>
+                    </ol>
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item">
+                            <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right"/>
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                            </blockquote>
+                        </div>
+                        <div class="item">
+                            <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right" />
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                            </blockquote>
+                        </div>
+                        <div class="active item">
+                                <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right" />
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                            </blockquote>
+                        </div>
+                        <div class="item">
+                                <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right" />
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                            </blockquote>
+                        </div>
+                        <div class="item">
+                            <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right" />
+
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                            </blockquote>
+                        </div>
+                        <div class="item">
+                            <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right" />
+
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //Hover effects on circle objects
+        $("#panel1").hover(function () { // on hover
+
+            //$("panel1").animate({left: "+=50"});
+            // $("#panel1").animate({ marginLeft: "+50px" });
+            $("#panel1").animate({ margin: 0, width: "+=20", height: "+=20" });
+
+        }, function () {//on mouseout
+            $("#panel1").animate({ margin: 0, width: "-=20", height: "-=20" });
+        });
+        $("#panel2").hover(function () { // on hover
+
+            $("#panel2").animate({ margin: 10, width: "+=20", height: "+=20" });
+            //$("#panel2").css("margin-top", "-20px");
+        }, function () {//on mouseout
+            $("#panel2").animate({ margin: 0, width: "-=20", height: "-=20" });
+        });
+        $("#panel3").hover(function () { // on hover
+
+            $("#panel3").animate({ margin: 0, width: "+=20", height: "+=20" });
+            //$("#panel3").css("margin-top", "-20px");
+        }, function () {//on mouseout
+            $("#panel3").animate({ margin: 0, width: "-=20", height: "-=20" });
+        });
+        $("#panel4").hover(function () { // on hover
+
+            $("#panel4").animate({ margin: 0, width: "+=20", height: "+=20" });
+            //$("#panel4").css("margin-top", "-20px");
+        }, function () {//on mouseout
+            $("#panel4").animate({ margin: 0, width: "-=20", height: "-=20" });
+        });
+        //every time the window is scrolled
+        $(window).scroll(function () {
+            //var scrollCount = $(window).scrollTop();
+            $("#floatInElement").slideDown();
+            //if (scrollCount > 100) { $("#floatInElement").hide().show("slide", { direction: "left" }, 1500); }
+        });
+    });
+</script>
