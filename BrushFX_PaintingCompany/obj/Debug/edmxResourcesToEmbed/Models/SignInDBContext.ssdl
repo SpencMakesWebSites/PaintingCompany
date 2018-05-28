@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BrushFX_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BrushFX_DB.dbo.SecureUser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SecureUser">
+    <Key>
+      <PropertyRef Name="UserKey" />
+    </Key>
+    <Property Name="EmailAddress" Type="varchar" MaxLength="30" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="PasswordHash" Type="varchar" MaxLength="255" />
+    <Property Name="UserKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BrushFX_DBModelStoreContainer">
+    <EntitySet Name="SecureUser" EntityType="Self.SecureUser" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SecureUser].[EmailAddress] AS [EmailAddress], 
+    [SecureUser].[UserName] AS [UserName], 
+    [SecureUser].[PasswordHash] AS [PasswordHash], 
+    [SecureUser].[UserKey] AS [UserKey]
+    FROM [dbo].[SecureUser] AS [SecureUser]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

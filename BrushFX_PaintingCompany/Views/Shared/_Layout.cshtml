@@ -2,97 +2,100 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false;">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
 </head>
 <body class="grey">
-    <nav class="navbar navbar-inverse " >
-        <div class="container-fluid">
-
+    <nav class="navbar navbar-inverse">
+        <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Brush FX</a>
 
-                <button type="button" id="icon-button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar"></button>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#important-id-for-collapsing" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="navHover" href="@Url.Action("Index","Home")">Brush FX</a>
             </div>
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="#">About Us</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            Commercial
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Interior</a></li>
-                            <li><a href="#">Exterior</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Residential</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact Us</a></li>
+            <div class="collapse navbar-collapse" id="important-id-for-collapsing">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("About","Home")" id="navhover2">About Us</a></li>
+                    <li><a href="@Url.Action("Residential","Home")" id="navhover2">Residential</a></li>
+                    <li><a href="@Url.Action("Commercial","Home")" id="navhover2">Commercial</a></li>
+                    <li><a href="@Url.Action("Index","Gallery")" id="navhover2">Gallery</a></li>
+                    <li><a href="@Url.Action("Contact","Home")" id="navhover2">Contact Us</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#login-modal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+                    <!--Navbar right-->
+                    @{
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            <li><a href="@Url.Action("SignOut","Account")"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+                            <li><a href="@Url.Action("Orders","Account")"><span class="glyphicon glyphicon-home"></span> My Account</a></li>
+                        }
+                        else if (!User.Identity.IsAuthenticated)
+                        {
+                            <li><a href="@Url.Action("Register","Account")"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="@Url.Action("Login","Account")"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        }
+                    }
                 </ul>
             </div>
-
-
         </div>
     </nav>
 
     <!--Login Modal-->
-    <div class="modal fade" id="login-modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <form>
-                        <div class="jumbotron">
-                            <div >
-                                <h3 class="text-primary text-center"> Sign In</h3>
+    <!--
+        <div class="modal fade" id="login-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form>
+                            <div class="jumbotron">
+                                <div>
+                                    <h3 class="text-primary text-center"> Sign In</h3>
+
+                                </div>
+
+                                <div class="row text-center col-lg-offset-2">
+
+                                    <div class="col col-lg-8">
+                                        <div class="form-group">
+                                            <input type="text" id="loginUserName" name="loginUserName" placeholder="username" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col col-lg-8">
+                                        <div class="form-group">
+                                            <input type="password" name="pass" placeholder="Password" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col col-lg-8">
+                                        <div class="form-group">
+                                            <button class="btn btn-block btn-primary">Sign In</button>
+                                        </div>
+                                    </div>
+                                    <div class="text-primary">
+                                        <p class="text-muted"><a href="#">Forgot password?</a></p>
+                                    </div>
+                                    <div class="text-primary">
+                                        <p class="text-muted"><a href="#">Forgot username?</a></p>
+                                    </div>
+                                </div>
 
                             </div>
 
-                            <div class="row text-center col-lg-offset-2">
-
-                                <div class="col col-lg-8">
-                                    <div class="form-group">
-                                        <input type="text" id="loginUserName" name="loginUserName" placeholder="username" class="form-control" />
-                                    </div>
-                                </div>
-                                <div class="col col-lg-8">
-                                    <div class="form-group">
-                                        <input type="password" name="pass" placeholder="Password" class="form-control" />
-                                    </div>
-                                </div>
-                                <div class="col col-lg-8">
-                                    <div class="form-group">
-                                        <button class="btn btn-block btn-primary">Sign In</button>
-                                    </div>
-                                </div>
-                                <div class="text-primary">
-                                    <p class="text-muted"><a href="#">Forgot password?</a></p>
-                                </div>
-                                <div class="text-primary">
-                                    <p class="text-muted"><a href="#">Forgot username?</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    -->
     <div class="container-fluid body-content">
         @RenderBody()
         <hr />
@@ -106,23 +109,21 @@
                         <div class="col-xs-12 col-sm-4 col-md-4">
                             <h5>Quick links</h5>
                             <ul class="list-unstyled quick-links">
-                                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-                                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Gallery</a></li>
-                                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
-                                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                                <li><a href="@Url.Action("Index","Home")"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                                <li><a href="@Url.Action("About","Home")"><i class="fa fa-angle-double-right"></i>About</a></li>
+                                <li><a href="@Url.Action("Index","Gallery")"><i class="fa fa-angle-double-right"></i>Gallery</a></li>
+                                <li><a href="@Url.Action("Contact","Home")"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
+                                <li><a href="@Url.Action("Videos","Gallery")"><i class="fa fa-angle-double-right"></i>Videos</a></li>
                             </ul>
                         </div>
-                        
+
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
                             <ul class="list-unstyled list-inline social text-center">
-                                <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.facebook.com/pages/biz/local/Brush-FX-Professional-Coatings/512356785633646/"><i class="fa fa-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/perry_the_portagee/"><i class="fa fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="mailto:brushfxpc@gmail.com?subject=Inquiry" target="_blank"><i class="fa fa-envelope"></i></a></li>
                             </ul>
                         </div>
                         </br>
@@ -133,9 +134,34 @@
             <!-- ./Footer -->
         </footer>
     </div>
-        
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            $("#navHover2").hover(function () {
+                $("#navHover2").css("background-color", "black");
+            },
+                //hover out
+                function () {
+                    $("#navHover2").css("background-color", "#f8f8f8");
+                }
+            );
+
+
+            $("#navHover").hover(function () {
+                $("#navHover").css("background-color", "#585858");
+            },
+                //hover out
+                function () {
+                    $("#navHover").css("background-color", "#222222");
+                }
+            );
+
+        });
+    </script>
+
 </body>
 </html>

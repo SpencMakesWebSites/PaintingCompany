@@ -1,0 +1,43 @@
+﻿
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <div class="search-box">
+                <div class="caption">
+                    <h3><strong>Login</strong></h3>
+                </div>
+                <form action="@Url.Action("Login","Account")" id="myForm" class="loginForm" method="post">
+                    <div class="input-group">
+                        <div class="text-danger">
+                            @Html.ValidationMessage("LogOnError")
+                                            </div>
+                        <input type="text" id="email" class="form-control" name="email" placeholder="EmailAddress">
+                        <input type="password" id="pass" class="form-control" name="pass" placeholder="Password">
+                        <input type="submit" id="submitBtn" class="form-control">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+<script>
+    $(document).ready(function () {
+
+        $("#submitBtn").submit(function () {
+            $.ajax({
+                url: "Account/Login",
+                type: "Post",
+                timeout: "20000",
+                datatype: "text",
+                data:
+                    {
+                        emailAddress: myForm.emailAddress.value,
+                        password: myForm.password.value,
+                    }
+            });
+        });
+    });
+</script>
+    -->

@@ -2,7 +2,7 @@
     ViewBag.Title = "Home Page";
 }
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-@Scripts.Render("~/bundles/jquery")
+
 @Scripts.Render("~/bundles/bootstrap")
 
 <!--Carousel-->
@@ -33,14 +33,12 @@
 
 <!--Panel-->
 <div class="jumbotron">
-
-
-    <div class="panel panel-default" id="hoverTrigger1">
+    <div class="panel panel-info" id="hoverTrigger1">
         <div class="row text-center">
             <div class="col col-lg-3 col-sm-6 pull-left col-xs-12 text-center">
                 <div class="panel-body col-lg-offset-1 borderless">
                     <div class="thumbnail borderless">
-                        <a href="~/Content/Pictures/203X203/InteriorPainting.png" alt="cabinets" class="borderless">
+                        <a href="@Url.Action("Interior","Gallery")" alt="cabinets" class="borderless">
                             <img src="~/Content/Pictures/203X203/InteriorPainting.png" id="panel1" />
                         </a>
                         <div class="caption text-center"><h3 class="text-primary">Interior</h3></div>
@@ -50,7 +48,7 @@
             <div class="col col-lg-3 col-sm-6 pull-left col-xs-12 text-center">
                 <div class="panel-body col-lg-offset-1 borderless">
                     <div class="thumbnail borderless">
-                        <a href="~/Content/Pictures/203X203/ExteriorPainting.png" alt="cabinets" class="borderless">
+                        <a href="@Url.Action("Exterior","Gallery")" alt="exterior" class="borderless">
                             <img src="~/Content/Pictures/203X203/ExteriorPainting.png" id="panel2" />
                         </a>
                         <div class="caption text-center"><h3 class="text-primary">Exterior</h3></div>
@@ -60,7 +58,7 @@
             <div class="col col-lg-3 col-sm-6 pull-left col-xs-12 text-center">
                 <div class="panel-body col-lg-offset-1 borderless">
                     <div class="thumbnail borderless">
-                        <a href="~/Content/Pictures/203X203/CabinetPainting.png" alt="cabinets" class="borderless">
+                        <a href="@Url.Action("Cabinets","Gallery")" alt="cabinets" class="borderless">
                             <img src="~/Content/Pictures/203X203/CabinetPainting.png" id="panel3" />
                         </a>
                         <div class="caption text-center"><h3 class="text-primary">Cabinets</h3></div>
@@ -70,7 +68,7 @@
             <div class="col col-lg-3 col-sm-6 pull-left col-xs-12 text-center">
                 <div class="panel-body col-lg-offset-1 borderless">
                     <div class="thumbnail borderless">
-                        <a href="~/Content/Pictures/203X203/Decks.png" alt="decks" class="borderless">
+                        <a href="@Url.Action("Decks","Gallery")" alt="decks" class="borderless">
                             <img src="~/Content/Pictures/203X203/Decks.png" id="panel4" />
                         </a>
                         <div class="caption text-center"><h3 class="text-primary">Decks</h3></div>
@@ -85,18 +83,22 @@
     <div class="row">
         <h1 style="color:#708090;font-family:serif" class="text-center">Find your balance</h1>
         <div class="col col-lg-6 col-sm-6 col-xs-6" id="floatInElement">
-            <img src="~/Content/Pictures/640X480/Cabinents.jpg" id="hover-image" class="img-rounded" />
-            <div class="middle">
-                <button id="hidden1" class="btn btn-primary">COATING</button>
-            </div>
+            <a href="@Url.Action("Interior","Gallery")">
+                <img src="~/Content/Pictures/640X480/Cabinents.jpg" id="hover-image" class="img-rounded" />
+                <div class="middle">
+                    <button id="hidden1" class="btn btn-primary">COATING</button>
+                </div>
+            </a>
         </div>
 
         <div class="col col-lg-6 col-sm-6 col-xs-6" id="floatInElement">
-            <img src="~/Content/Pictures/640X480/Exterior_640X480.jpg" id="hover-image" class="img-rounded" />
-            <div class="middle">
-                <button id="hidden1" class="btn btn-primary">REFINISHING</button>
-            </div>
-        </div>
+            <a href="@Url.Action("Exterior","Gallery")">
+                <img src="~/Content/Pictures/640X480/Exterior_640X480.jpg" id="hover-image" class="img-rounded" />
+                <div class="middle">
+                    <button id="hidden1" class="btn btn-primary">REFINISHING</button>
+                </div>
+            </a>
+</div>
 
     </div>
 </div>
@@ -120,7 +122,7 @@
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         <div class="item">
-                            <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right"/>
+                            <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right" />
                             <blockquote>
                                 <p class="list-inline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
                             </blockquote>
@@ -132,13 +134,13 @@
                             </blockquote>
                         </div>
                         <div class="active item">
-                                <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right" />
+                            <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right" />
                             <blockquote>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
                             </blockquote>
                         </div>
                         <div class="item">
-                                <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right" />
+                            <img src="~/Content/Pictures/200X200/FacePic1.jpg" class="img-thumbnail pull-right" />
                             <blockquote>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
                             </blockquote>
@@ -164,12 +166,12 @@
     </div>
 </section>
 
+@Scripts.Render("~/bundles/jquery")
 <script type="text/javascript">
 
     $(document).ready(function () {
         //Hover effects on circle objects
         $("#panel1").hover(function () { // on hover
-
             //$("panel1").animate({left: "+=50"});
             // $("#panel1").animate({ marginLeft: "+50px" });
             $("#panel1").animate({ margin: 0, width: "+=20", height: "+=20" });
@@ -198,11 +200,6 @@
         }, function () {//on mouseout
             $("#panel4").animate({ margin: 0, width: "-=20", height: "-=20" });
         });
-        //every time the window is scrolled
-        $(window).scroll(function () {
-            //var scrollCount = $(window).scrollTop();
-            $("#floatInElement").slideDown();
-            //if (scrollCount > 100) { $("#floatInElement").hide().show("slide", { direction: "left" }, 1500); }
-        });
+
     });
 </script>

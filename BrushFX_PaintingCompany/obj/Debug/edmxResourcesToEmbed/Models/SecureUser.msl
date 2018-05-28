@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BrushFX_DBModelStoreContainer" CdmEntityContainer="BrushFX_DBEntities">
+    <EntitySetMapping Name="SecureUsers">
+      <EntityTypeMapping TypeName="BrushFX_DBModel.SecureUser">
+        <MappingFragment StoreEntitySet="SecureUser">
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="UserKey" ColumnName="UserKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
